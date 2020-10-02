@@ -1,0 +1,14 @@
+n = int(input('Введите крайнее число диапазона: '))
+flag = True
+given_list = []
+while flag:
+    a = input('Введите букву, или "exit" для выхода: ')
+    if a == 'exit':
+        flag = False
+    else:
+        given_list.append(a)
+output_list = []
+for i in range(n):
+    for y in given_list:
+        output_list.append(y + str(i + 1))
+print(output_list)
