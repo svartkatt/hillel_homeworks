@@ -1,0 +1,10 @@
+first_year = int(input('Введите год, с которого следует начинать считать: '))
+second_year = int(input('Введите год, до которого следует начинать считать: '))
+leap_years = []
+for i in range(first_year, second_year + 1):
+    if i % 4 == 0 and i % 100 != 0 or i & 400 == 0:
+        leap_years.append(i)
+leap_years_string = ''
+for y in leap_years:
+    leap_years_string += str(y) + ', '
+print(leap_years_string[:-2])
