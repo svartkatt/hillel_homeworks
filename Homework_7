@@ -1,0 +1,9 @@
+xo_list = [['x', 'o', ''], ['', 'x', ''], ['', 'o', 'x']]
+for i in xo_list:
+    print('|', end='')
+    for y in i:
+        if y == '':
+            print(' |', end='')
+        else:
+            print(y + '|', end='')
+    print('')
