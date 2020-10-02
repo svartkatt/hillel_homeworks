@@ -1,0 +1,15 @@
+input_list = [1, 2, 3, 4, 5, 1, 4, 1, 2, 4, 4]
+set_list = set(input_list)
+dict_list = {}
+for a in set_list:
+    dict_list[a] = 0
+for i in input_list:
+    if i in set_list:
+        dict_list[i] += 1
+tuple_list = []
+for y in dict_list:
+    tuple_list.append((dict_list[y], y))
+tuple_list.sort()
+tuple_list.reverse()
+for b in tuple_list:
+    print(str(b[1]) + ': ' + b[0] * '*')
