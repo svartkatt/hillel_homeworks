@@ -1,0 +1,23 @@
+def exchange(list_, dict_prices, dict_stock):
+    price = 0
+    for i in list_:
+        if dict_stock[i] > 0:
+            dict_stock[i] -= 1
+            price += dict_prices[i]
+    return 'Цена: ' + str(price) + ', Остаток: ' + str(dict_stock)
+
+
+purchase_list = ["banana", "orange", "apple"]
+prices = {
+    "banana": 4,
+    "apple": 2,
+    "orange": 1.5,
+    "pear": 3
+}
+stock = {
+    "banana": 6,
+    "apple": 0,
+    "orange": 32,
+    "pear": 15
+}
+print(exchange(purchase_list, prices, stock))
