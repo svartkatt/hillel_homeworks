@@ -1,0 +1,7 @@
+input_dict = {'1': 'Red', '2': 'Green', '3': None}
+temp_dict = {}
+for i in input_dict:
+    if input_dict[i]:
+        temp_dict[i] = input_dict[i]
+input_dict = temp_dict
+print(input_dict)
