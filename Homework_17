@@ -1,0 +1,6 @@
+input_dict = {'Math': 81, 'Physics': 83, 'Chemistry': 87}
+temp_dict = {}
+for i in input_dict:
+    temp_dict[input_dict[i]] = i
+input_dict = temp_dict
+print(input_dict)
