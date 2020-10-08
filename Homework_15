@@ -1,3 +1,4 @@
 some_set = {1, 5.76, 'abba'}
-for i in list(some_set):
-    print(i)
+string_of_some_set = str(some_set)[1:-1]
+list_of_some_set = string_of_some_set.split(', ')
+print('\n'.join(list_of_some_set))
