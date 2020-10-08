@@ -1,0 +1,13 @@
+string = input('Введите строку: ')
+alphabet = 'abcdefghijklmnopqrstuvwxyzабвгдеёжзиклмнопрстуфхцчшщьыъэюя'
+letters = set()
+not_letters = 0
+for i in string:
+    if i.lower() in alphabet:
+        letters.add(i.lower())
+    else:
+        not_letters += 1
+if len(string) - not_letters > len(letters):
+    print(True)
+else:
+    print(False)
