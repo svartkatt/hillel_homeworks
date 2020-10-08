@@ -1,0 +1,10 @@
+input_set = {2, 3, 4, 123, -34, 5789}
+min_val = input_set.pop()
+max_val = min_val
+for i in range(len(input_set)):
+    temp = input_set.pop()
+    if min_val > temp:
+        min_val = temp
+    elif max_val < temp:
+        max_val = temp
+print('min: ' + str(min_val) + ', max: ' + str(max_val))
