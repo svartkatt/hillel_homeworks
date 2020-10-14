@@ -1,0 +1,27 @@
+def hotel_coast(days):
+    return days * 500
+
+
+def city_trip(city_name):
+    cities = {"Київ": 500, "Львів": 400, "Харків": 350, "Дніпро": 450, "Одеса": 600}
+    return cities[city_name]
+
+
+def car_loan(days):
+    coast = days * 1000
+    if days >= 7:
+        return coast - 1500
+    elif days >= 3:
+        return coast - 750
+    else:
+        return coast
+
+
+def trip_cost(hotel_days, car_days, city_name):
+    return hotel_coast(hotel_days) + car_loan(car_days) + city_trip(city_name)
+
+
+hotel = int(input("Введіть кількість днів, проведенних в готелі: "))
+car = int(input("Введіть кількість днів, на яку взято в оренду авто: "))
+city = input("Введіть назву міста: ")
+print(trip_cost(hotel, car, city))
