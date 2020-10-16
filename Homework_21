@@ -1,0 +1,29 @@
+# 1
+input_string1 = 'the quick brown fox jumps over the lazy dog'
+words_length = [len(i) for i in input_string1.split()]
+print(words_length)
+# 2
+input_string2 = [34.6, -203.4, 44.9, 68.3, -12.2, 44.6, 12.7]
+modules = [abs(i) for i in input_string2]
+print(modules)
+# 3
+squares = [i ** 2 for i in range(1, 11) if i % 2 == 0]
+print(squares)
+# 4
+cubes = [i ** 3 for i in range(1, 11) if i ** 3 % 4 == 0]
+print(cubes)
+# 5
+list_21 = [i for i in range(1, 22)]
+print(list_21)
+to_21 = [i for i in list_21 if i % 2 != 0]
+print(to_21)
+third = len(list_21) / 3
+middle_third = list_21[int(third):int(third) * 2]
+print(middle_third)
+# 6
+squares_2 = [i ** 2 for i in range(1, 11) if i ** 2 in range(30, 71)]
+print(squares_2)
+# 7
+message = '!XeXgXaXsXsXeXmX XtXeXrXcXeXsX XeXhXtX XmXaX XI'
+secret = [i for i in message[::-1] if i != 'X']
+print(''.join(secret))
