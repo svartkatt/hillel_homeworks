@@ -1,0 +1,4 @@
+input_text = input('Введіть текст: ')
+reversed_text = input_text[::-1]
+with open('output.txt', 'w') as text:
+    text.write(reversed_text)
