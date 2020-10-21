@@ -1,0 +1,4 @@
+alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+for i in alphabet:
+    with open(str(i) + '.txt', 'w') as text:
+        text.write(i)
