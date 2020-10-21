@@ -1,0 +1,9 @@
+with open('input.txt') as text:
+    words = dict()
+    for i in text.read().lower().split():
+        if i in words:
+            words[i] = words.get(i) + 1
+        else:
+            words[i] = 1
+for i in words:
+    print(str(i) + ': ' + str(words.get(i)))
