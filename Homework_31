@@ -1,0 +1,29 @@
+class Dog:
+    def __init__(self, name, age, breed):
+        self.name = name
+        self.age = age
+        self.breed = breed
+
+    def dogs_name_and_age(self):
+        return f'This dog\'s name is {self.name} and age is {self.age}'
+
+    def sound(self, sound):
+        return f'{self.name} says {sound}'
+
+
+class Shepherd(Dog):
+    def sound(self, sound):
+        return f'{super().sound(sound)} loudly'
+
+
+class Welsh_corgi(Dog):
+    def sound(self, sound):
+        return f'{super().sound(sound)} quiet'
+
+
+shepherd = Shepherd('Teddy', 4, 'shepherd')
+welsh_corgi = Welsh_corgi('Bobby', 2, 'corgi')
+print(shepherd.dogs_name_and_age())
+print(welsh_corgi.dogs_name_and_age())
+print(shepherd.sound('bark'))
+print(welsh_corgi.sound('woof'))
