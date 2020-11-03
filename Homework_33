@@ -1,0 +1,13 @@
+def rectangle_divider(first_num: int, second_num: int):
+    max_val = max(first_num, second_num)
+    min_val = min(first_num, second_num)
+    if max_val % min_val == 0:
+        return min_val
+    else:
+        new_min_val = min_val - (max_val % min_val)
+        return rectangle_divider(min_val, new_min_val)
+
+
+first = int(input('Введіть перше число: '))
+second = int(input('Введіть друге число: '))
+print(rectangle_divider(first, second))
