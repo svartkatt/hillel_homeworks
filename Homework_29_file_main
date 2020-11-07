@@ -1,3 +1,12 @@
 import calc
 
-calc.calculator()
+while True:
+    val = input('Введіть формулу: ')
+    if val == 'exit':
+        break
+    try:
+        calc.calculator(val)
+    except ValueError:
+        print('Ви не ввели три елементи')
+    except IOError:
+        print('Другий вхід не "+", "-", "*", чи "/"')
