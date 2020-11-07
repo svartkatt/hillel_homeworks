@@ -1,21 +1,27 @@
-def calculator():
-    while True:
-        val = input('Введіть формулу: ')
-        if val == 'exit':
-            break
-        vals = val.split()
-        symbols = ['+', '-', '*', '/']
-        if len(vals) != 3:
-            raise ValueError('Ви не ввели три елементи')
-        float_1 = float(vals[0])
-        float_2 = float(vals[2])
-        if vals[1] not in symbols:
-            raise IOError('Другий вхід не "+", "-", "*", чи "/"')
-        if vals[1] == '+':
-            print(float_1 + float_2)
-        elif vals[1] == '-':
-            print(float_1 - float_2)
-        elif vals[1] == '*':
-            print(float_1 * float_2)
-        elif vals[1] == '/':
-            print(float_1 / float_2)
+def get_val(val):
+    vals = val.split()
+    return vals
+
+def check(val):
+    vals = get_val(val)
+    if len(vals) != 3:
+        raise ValueError()
+    symbol = vals[1]
+    symbols = ['+', '-', '*', '/']
+    if symbol not in symbols:
+        raise IOError()
+
+def calculator(val):
+    check(val)
+    vals = get_val(val)
+    float_1 = float(vals[0])
+    float_2 = float(vals[2])
+    symbol = vals[1]
+    if symbol == '+':
+        print(float_1 + float_2)
+    elif symbol == '-':
+        print(float_1 - float_2)
+    elif symbol == '*':
+        print(float_1 * float_2)
+    elif symbol == '/':
+        print(float_1 / float_2)
