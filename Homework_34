@@ -1,0 +1,20 @@
+from random import choice
+
+
+def sorting(list_):
+    if len(list_) < 2:
+        return list_
+    the_element = list_[0]
+    bigger_list = []
+    smaller_list = []
+    for i in list_[1:]:
+        if i > the_element:
+            bigger_list.append(i)
+        else:
+            smaller_list.append(i)
+    return sorting(smaller_list) + [the_element] + sorting(bigger_list)
+
+
+list_len = int(input('Введіть довжину листа: '))
+new_list = [choice(range(10000)) for i in range(list_len)]
+print(sorting(new_list))
