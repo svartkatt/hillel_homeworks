@@ -1,0 +1,11 @@
+def my_enumerate(arr):
+    index = 0
+    while True:
+        yield arr[index], index
+        index += 1
+
+
+my_gen = my_enumerate([10, 20, 30])
+print(my_gen.__next__())
+print(my_gen.__next__())
+print(my_gen.__next__())
