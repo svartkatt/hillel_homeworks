@@ -1,0 +1,15 @@
+from itertools import islice
+
+
+def eternal_iterator(arr):
+    val = 0
+    while True:
+        yield arr[val]
+        if val < len(arr) - 1:
+            val += 1
+        else:
+            val = 0
+
+
+my_gen = eternal_iterator([1, 2, 3])
+print(list(islice(my_gen, 0, 7)))
