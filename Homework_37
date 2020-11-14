@@ -1,0 +1,19 @@
+def bold(func):
+    def wrapper(y):
+        return '**' + func(y) + '**'
+    return wrapper
+
+
+def italic(func):
+    def wrapper(y):
+        return '*' + func(y) + '*'
+    return wrapper
+
+
+@italic
+@bold
+def text(x):
+    return str(x)
+
+
+print(text(input('Введіть текст: ')))
