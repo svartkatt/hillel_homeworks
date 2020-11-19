@@ -1,0 +1,55 @@
+class Group:
+    def __init__(self, name, quantity, student):
+        self.name = name
+        self.quantity = quantity
+        self.student = student
+
+    @classmethod
+    def generated_group(cls, quantity):
+        return cls(quantity)
+
+
+class Student:
+    def __init__(self, name, age, mark):
+        self.name = name
+        self.age = age
+        self.mark = mark
+
+    @property
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self, name):
+        self.__name = name
+
+    @property
+    def age(self):
+        return self.__age
+
+    @age.setter
+    def age(self, age):
+        self.__age = age
+
+    @property
+    def mark(self):
+        return self.__mark
+
+    @mark.setter
+    def mark(self, mark):
+        self.__mark = mark
+
+    @staticmethod
+    def bologna(mark):
+        if mark >= 90:
+            return 'A'
+        elif mark >= 85:
+            return 'B'
+        elif mark >= 75:
+            return 'C'
+        elif mark >= 65:
+            return 'D'
+        elif mark >= 60:
+            return 'E'
+        else:
+            return 'Fx'
