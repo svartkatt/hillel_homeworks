@@ -5,8 +5,11 @@ class Group:
         self.student = student
 
     @classmethod
-    def generated_group(cls, quantity):
-        return cls(quantity)
+    def generated_group(cls, quantity, name, age, mark):
+        students = []
+        for i in range(quantity):
+            students.append(Student(name, age, mark))
+        return cls
 
 
 class Student:
@@ -17,27 +20,27 @@ class Student:
 
     @property
     def name(self):
-        return self.__name
+        return self.name
 
     @name.setter
     def name(self, name):
-        self.__name = name
+        self.name = name
 
     @property
     def age(self):
-        return self.__age
+        return self.age
 
     @age.setter
     def age(self, age):
-        self.__age = age
+        self.age = age
 
     @property
     def mark(self):
-        return self.__mark
+        return self.mark
 
     @mark.setter
     def mark(self, mark):
-        self.__mark = mark
+        self.mark = mark
 
     @staticmethod
     def bologna(mark):
