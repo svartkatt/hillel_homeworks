@@ -1,15 +1,15 @@
 class Group:
-    def __init__(self, name, quantity, student):
+    def __init__(self, name, quantity, students):
         self.name = name
         self.quantity = quantity
-        self.student = student
+        self.students = students
 
     @classmethod
     def generated_group(cls, quantity, name, age, mark):
         students = []
         for i in range(quantity):
             students.append(Student(name, age, mark))
-        return cls
+        return cls(name, quantity, students)
 
 
 class Student:
