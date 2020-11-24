@@ -4,12 +4,13 @@ class Group:
         self.quantity = quantity
         self.students = students
 
-    @classmethod
+      @classmethod
     def generated_group(cls, quantity, name, age, mark):
         students = []
         for i in range(quantity):
             students.append(Student(name, age, mark))
-        return students
+        group1 = Group(name, quantity, students)
+        return group1
 
 
 class Student:
