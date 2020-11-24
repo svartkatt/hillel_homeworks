@@ -10,7 +10,7 @@ class Group:
         for i in range(quantity):
             students.append(Student(name, age, mark))
         group1 = Group(name, quantity, students)
-        return group1
+        return cls(name, quantity, students)
 
 
 class Student:
